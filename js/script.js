@@ -4,8 +4,20 @@ FSJS project 2 - List Filter and Pagination
 ******************************************/
 
 // Study guide for this project - https://drive.google.com/file/d/1OD1diUsTMdpfMDv677TfL1xO2CEkykSz/view?usp=sharing
+const listItems = document.getElementById('li')
+  const gVariables = document.getElementById('')
 
-const gVariables = document.getElementById('')
+
+for{let i = 0; i < listItems.length; i += 1)
+
+
+    listItems.addEventlistener("mouseover". () =>{
+    listItems.textContent = listItems.textContent.toUpperCase();
+    });
+    listItems[i].addEventlistener("mouseout". () =>{
+    listItems[i].textContent = listItems.textContent.toLowerCase();
+    });
+  }
 /***
    Add your global variables that store the DOM elements you will
    need to reference and/or manipulate.
