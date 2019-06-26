@@ -4,12 +4,7 @@ FSJS project 2 - List Filter and Pagination
 ******************************************/
 
 // Study guide for this project - https://drive.google.com/file/d/1OD1diUsTMdpfMDv677TfL1xO2CEkykSz/view?usp=sharing
-const listItems = document.getElementById('li')
-  const gVariables = document.getElementById('')
-
-
-for{let i = 0; i < listItems.length; i += 1)
-
+const listItems = document.getElementsByTagName('li')
 
 
 /***
@@ -23,11 +18,9 @@ for{let i = 0; i < listItems.length; i += 1)
    scoped to that function.
 ***/
 
-
 const showPage(list, page) =>{
-  for (var i = 10; i > list.length; i--) {
+  for (var i = 9; i < listItems.length; i-=1) {
     list[i]
-
    }
 }
 
