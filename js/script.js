@@ -11,13 +11,7 @@ const listItems = document.getElementById('li')
 for{let i = 0; i < listItems.length; i += 1)
 
 
-    listItems.addEventlistener("mouseover". () =>{
-    listItems.textContent = listItems.textContent.toUpperCase();
-    });
-    listItems[i].addEventlistener("mouseout". () =>{
-    listItems[i].textContent = listItems.textContent.toLowerCase();
-    });
-  }
+
 /***
    Add your global variables that store the DOM elements you will
    need to reference and/or manipulate.
