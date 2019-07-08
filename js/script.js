@@ -6,6 +6,8 @@ FSJS project 2 - List Filter and Pagination
 // Study guide for this project - https://drive.google.com/file/d/1OD1diUsTMdpfMDv677TfL1xO2CEkykSz/view?usp=sharing
 const listItems = document.querySelectorAll('li');
 const studentsPerPage = 10
+const list 
+const page
 /***
    Add your global variables that store the DOM elements you will
    need to reference and/or manipulate.
@@ -21,8 +23,8 @@ const showPage(list, page) => {
   for (var i = 0; i < listItems.length; i+=1) {
     list[i]
   };
-  var startI = (page / studentsPerPage) + studentsPerPage ;
-  var finishI = (page / studentsPerPage);
+  var startI = (page * studentsPerPage) - studentsPerPage ;
+  var finishI = (page * studentsPerPage);
 };
 
 /***
