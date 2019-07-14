@@ -65,9 +65,11 @@ listItems[i].style.display = "none"
    functionality to the pagination buttons.
    example = contentDiv.appendChild(newParagraph)
 ***/
-function appendPageLinks(){
-
-  for(let i = 0; i<listItems.length; i += 1); 
+function appendPageLinks(listItems){
+ const listPages
+  for(let i = 0; i<listItems.length; i += 1)
+    var ul  = document.createElement("ul"); 
+    var div = document.createElement("div");
     var li = document.createElement('li');
     var a = document.createElement('a');
     li.appendChild(a);
