@@ -66,8 +66,11 @@ listItems[i].style.display = "none"
    example = contentDiv.appendChild(newParagraph)
 ***/
 function appendPageLinks(){
-li.appendChild()
-
+/*** var li = document.createElement('li');
+var a = document.createElement('a')
+li.appendChild(a)
+ul.appendChild(li)
+***/
 };
 
 
