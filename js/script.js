@@ -21,8 +21,8 @@ const studentsPerPage = 10
 function showPage(list, page){
       var startI = (page * studentsPerPage) - studentsPerPage ;
       var finishI = (page * studentsPerPage);
-    for(let i = startI; i < finishI;i += 1)
-    if(i >= startI && i< finishI){
+    for(let i = 0; i < list.length; i += 1)
+    if(i >= startI && i < finishI){
         list[i].style.display = " "
     } else {
       list[i].style.display = "none";
