@@ -1,9 +1,7 @@
 /******************************************
-Treehouse Techdegree:
 FSJS project 2 - List Filter and Pagination
 ******************************************/
 
-// Study guide for this project - https://drive.google.com/file/d/1OD1diUsTMdpfMDv677TfL1xO2CEkykSz/view?usp=sharing
 const listItems = document.querySelectorAll('li');
 const studentsPerPage = 10
 
@@ -19,17 +17,17 @@ const studentsPerPage = 10
 ***/
 
 function showPage(list, page){
-      var startI = (page * studentsPerPage) - studentsPerPage ;
+      var startI = (page * studentsPerPage) - studentsPerPage ; // "I"stands for index
       var finishI = (page * studentsPerPage);
     for(let i = 0; i < list.length; i += 1)
     if(i >= startI && i < finishI){
-        list[i].style.display = " "
+        list[i].style.display = " ";
     } else {
       list[i].style.display = "none";
     };
   
 };
-
+showPage(listItems , 1);
 
 
 /*** 
