@@ -19,15 +19,15 @@ const studentsPerPage = 10
 ***/
 
 function showPage(list, page){
-  for (var i = 0; i < listItems.length; i+=1) {
       var startI = (page * studentsPerPage) - studentsPerPage ;
       var finishI = (page * studentsPerPage);
-  hideStudents();
     for(let i = startI; i < finishI;i += 1)
-    if(list[i]){
-        list[i].style.display = "none"
+    if(i >= startI && i< finishI){
+        list[i].style.display = " "
+    } else {
+      list[i].style.display = "none";
     };
-  };
+  
 };
 
 //hides the listItems
@@ -64,15 +64,12 @@ listItems[i].style.display = "none"
    functionality to the pagination buttons.
    example = contentDiv.appendChild(newParagraph)
 ***/
-<<<<<<< HEAD
-function appendPageLinks(){ 
-  for (let i = 0; i<listItems.length; i += 1){
-=======
+
+
 /***
 function appendPageLinks(listItems){
- const listPages
   for(let i = 0; i<listItems.length; i += 1)
->>>>>>> 9592e8cb22064af9f119b31510ed1812c2a325f6
+
     var ul  = document.createElement("ul"); 
     var div = document.createElement("div");
     var li = document.createElement('li');
