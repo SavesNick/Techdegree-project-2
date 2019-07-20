@@ -30,13 +30,6 @@ function showPage(list, page){
   
 };
 
-//hides the listItems
-/***
-function hideStudents(){
-for (let i = 0;i < listItems.length; i += 1);
-listItems[i].style.display = "none"
-};  
-
 
 
 /*** 
