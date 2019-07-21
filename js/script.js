@@ -57,19 +57,27 @@ showPage(listItems , 1);
 ***/
 
 
-/***
-function appendPageLinks(listItems){
+
+function appendPageLinks(list){
   for(let i = 0; i<listItems.length; i += 1)
 
-    var ul  = document.createElement("ul"); 
-    var div = document.createElement("div");
-    var li = document.createElement('li');
-    var a = document.createElement('a');
+      var ul  = document.createElement("ul"); 
+      var div = document.createElement("div");
+      var li  = document.createElement("li"); 
+      var a = document.createElement("a");
+      var numOfPages = Math.floor(list.length / 7)
+
     li.appendChild(a);
     ul.appendChild(li);
+    div.appendChild(div);
+    div.appendChild(ul)
+    div.className("pagination")
+
+    for(let i = 0; i < numOfPages; i+=1){
+      
+    };
    };
-  };
-***/
+  
 
 
 
