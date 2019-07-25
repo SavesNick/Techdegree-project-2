@@ -4,7 +4,7 @@ FSJS project 2 - List Filter and Pagination
 
 const listItems = document.querySelectorAll('li');
 const studentsPerPage = 10
-
+const anchor = document.querySelectorAll("a")
 /***
    Add your global variables that store the DOM elements you will
    need to reference and/or manipulate.
@@ -63,20 +63,39 @@ function appendPageLinks(list){
 
       var ul  = document.createElement("ul"); 
       var div = document.createElement("div");
-      var li  = document.createElement("li"); 
-      var a = document.createElement("a");
+      
+      
       var numOfPages = Math.floor(list.length / 7)
 
-    li.appendChild(a);
-    ul.appendChild(li);
+    
+    
     div.appendChild(div);
     div.appendChild(ul)
     div.className("pagination")
 
     for(let i = 0; i < numOfPages; i+=1){
-      
+
+      var li  = document.createElement("li");
+        ul.appendChild(li);
+      var a = document.createElement("a");
+        li.appendChild(a);
+        a.href = "#";
+        a.textContent = i + 1;
     };
-   };
+ul.firstElementChild.className('active')
+
+for(let i = 0; i< anchor.length;i +=1){
+    anchorp[i].addEventListener("click", (e) => {
+      var liGroup = ul.getElementsByTagName("li")
+
+for(let i = 0; i< liGroup.length;i +=1){
+      liGroup.item(e).firstElementChild.className = "";
+};
+      e.target.className = "active"
+      showPage(list, e.targt.textContent);
+  });
+};
+};
   
 
 
