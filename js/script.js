@@ -4,7 +4,7 @@ FSJS project 2 - List Filter and Pagination
 
 const listItems = document.querySelectorAll('li');
 const studentsPerPage = 10
-const anchor = document.querySelectorAll("a")
+
 /***
    Add your global variables that store the DOM elements you will
    need to reference and/or manipulate.
@@ -65,13 +65,13 @@ function appendPageLinks(list){
       var div = document.createElement("div");
       
       
-      var numOfPages = Math.floor(list.length / 7)
+      var numOfPages = Math.ceil(list.length / studentsPerPage)
 
     
     
     div.appendChild(div);
-    div.appendChild(ul)
-    div.className("pagination")
+    div.appendChild(ul);
+    div.className("pagination");
 
     for(let i = 0; i < numOfPages; i+=1){
 
@@ -80,24 +80,24 @@ function appendPageLinks(list){
       var a = document.createElement("a");
         li.appendChild(a);
         a.href = "#";
-        a.textContent = i + 1;
+        a.textContent = i;
     };
+
+    var anchor = document.querySelectorAll("a");
+
 ul.firstElementChild.className('active')
 
-for(let i = 0; i< anchor.length;i +=1){
-    anchorp[i].addEventListener("click", (e) => {
+for(let i = 0; i< anchor.length;i += 1){
+    anchor[i].addEventListener("click", (e) => {
       var liGroup = ul.getElementsByTagName("li")
 
-for(let i = 0; i< liGroup.length;i +=1){
-      liGroup.item(e).firstElementChild.className = "";
+for(let i = 0; i < liGroup.length; i += 1){
+      liGroup.item(i).firstElementChild.className = "";
 };
-      e.target.className = "active"
-      showPage(list, e.targt.textContent);
+      e.target.className = "active";
+      showPage(list, e.target.textContent);
   });
 };
 };
-  
-
-
-
-// Remember to delete the comments that came with this file, and replace them with your own code comments.
+showPage(listItems , 1);
+appendPageLinks(listItems);
