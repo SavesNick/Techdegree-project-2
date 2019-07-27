@@ -2,7 +2,7 @@
 FSJS project 2 - List Filter and Pagination
 ******************************************/
 
-const listItems = document.querySelectorAll('li');
+const listItems = document.querySelectorAll('.student-item');
 const studentsPerPage = 10
 
 /***
@@ -59,45 +59,48 @@ showPage(listItems , 1);
 
 
 function appendPageLinks(list){
-  for(let i = 0; i<listItems.length; i += 1)
-
+  var numOfPages = Math.ceil(list.length / studentsPerPage)
+ 
       var ul  = document.createElement("ul"); 
       var div = document.createElement("div");
+      var page = document.querySelector(".page");
       
-      
-      var numOfPages = Math.ceil(list.length / studentsPerPage)
-
-    
-    
-    div.appendChild(div);
+    page.appendChild(div)
     div.appendChild(ul);
-    div.className("pagination");
+    div.setAttribute("class","pagination")
+    
 
-    for(let i = 0; i < numOfPages; i+=1){
-
+    for(let i = 1; i < numOfPages; i+=1){
       var li  = document.createElement("li");
-        ul.appendChild(li);
       var a = document.createElement("a");
-        li.appendChild(a);
-        a.href = "#";
         a.textContent = i;
+        a.href = "#";
+
+        ul.appendChild(li);
+        li.appendChild(a);
+
     };
 
-    var anchor = document.querySelectorAll("a");
+    
 
-ul.firstElementChild.className('active')
+//ul.firstElementChild.className('active')
 
-for(let i = 0; i< anchor.length;i += 1){
-    anchor[i].addEventListener("click", (e) => {
-      var liGroup = ul.getElementsByTagName("li")
-
-for(let i = 0; i < liGroup.length; i += 1){
-      liGroup.item(i).firstElementChild.className = "";
-};
-      e.target.className = "active";
-      showPage(list, e.target.textContent);
+//for(let i = 0; i< anchor.length;i += 1){
+    ul.addEventListener("click", (e) => {
+      var buttons = e.target;
+      var numValue = e.target.textContent;
+/*** for(let i = 0; i < liGroup.length; i += 1){
+      
+};***/
+      //e.target.className = "active";
+      showPage(listItems, numValue);
+      var anchor = document.querySelectorAll("a");
+      for(let i = 0; i< anchor.length;i += 1){
+        anchor[i].className = "none";
+      };
+      buttons.className = "active"
   });
-};
+//};
 };
 showPage(listItems , 1);
 appendPageLinks(listItems);
