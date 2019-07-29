@@ -35,7 +35,7 @@ function appendPageLinks(list){                                                 
     div.setAttribute("class","pagination")                                                // setting attributes to div
     
 
-    for(let i = 1; i < numOfPages + 1; i+=1){                                            //
+    for(let i = 1; i < numOfPages + 1; i+=1){                                             
       var li  = document.createElement("li");                                            // li tag 
       var a = document.createElement("a");                                               // a tag
         a.textContent = i;
